@@ -1,0 +1,28 @@
+@startuml System Structure
+[Client App] -right.> ClientAccess : use
+
+frame "Server" {
+    [HWS server] -left- ClientAccess
+    [HWS server] -up.> HTTPS : use
+    [HWS server] -right.> ServiceAccess : use
+    [HWS server] -down.> DataAccess : use
+
+    database "Internal DB" {
+        [Internal Data] -up- DataAccess
+    }
+}
+
+[Service] -left- ServiceAccess
+note bottom of [Service]
+   A set of equipment (water pump, 
+   sensors, etc.) grouped through 
+   a microcontroller
+end note
+
+[Web Service] -down- HTTPS
+note left of [Web Service]
+    A web service that provides 
+    information about the weather, 
+    the time of sunrise (sunset) etc.
+end note
+@enduml

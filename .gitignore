@@ -19,6 +19,8 @@
 # Fortran module files
 *.mod
 *.smod
+*.clang-format
+*.vscode
 
 # Compiled Static libraries
 *.lai
