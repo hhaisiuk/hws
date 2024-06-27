@@ -45,4 +45,5 @@ Both sections of the document describe the same software product in its entirety
 ## 2. Overall Description
 
 ### 2.1 System Enviroment
+![Class Diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/hhaisiuk/hws/main/docs/uml/SysStruct.puml)
 
